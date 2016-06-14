@@ -1,0 +1,87 @@
+{% load staticfiles %}
+
+<html>
+<head>
+
+<title> Anime World </title>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+
+<link href="http://fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="{% static 'css/anime.css' %}">
+
+
+</head>
+
+<body>
+
+<div id="header" class="page-header">
+      <a href="{% url 'add_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+      <h1> ANIME WORLD </h1>
+</div>
+
+
+
+<div class="content container">
+
+
+<div class="row">
+
+   <div id="navi"  class="col-md-12">
+
+      {% block content %}
+
+      {% endblock %}
+   </div>
+</div>
+
+
+
+<div class="row">
+
+     <div id="left" class="col-md-3">
+
+      {% block content1 %}
+
+      {% endblock %}
+     </div>
+
+
+
+     <div id="center" class="col-md-6">
+
+      {% block content2 %}
+      {% endblock %}
+
+     </div>
+
+    <div id="right" class="col-md-3">
+      {% block content3 %}
+      {% endblock %}
+
+     </div>
+
+</div>
+
+
+<div class="row">
+
+   <div id="footer" class="col-md-12">
+      {% block content4 %}
+      {% endblock %}
+
+   </div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>
+
+
+

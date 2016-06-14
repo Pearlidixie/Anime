@@ -1,0 +1,59 @@
+{% extends 'anime/base.html' %}
+
+{% block content%}
+ 
+   <h3> NAVIGATIONAL LINKS </h3>
+ 
+{% endblock %}
+
+{% block content1%}
+
+   <h3> ANIME LINKS </h3>
+
+{% endblock %}
+
+{% block content2 %}
+<div>
+   <h3> CONTENT </h3>
+   <h4> THE MAGES </h4>
+   <ol> {% for mage in mages %}
+     
+        <li><a href="{% url 'mage_detail' pk=mage.pk  %}">Name: {{mage}}</a></li>
+        <ul>
+            <li> Age: {{mage.mage_age}}</li>
+            <li> Powers: {{mage.mage_powers|linebreaks}}</li>
+         </ul>
+    
+          {% endfor %}
+    </ol>
+</div>
+
+<div>
+ <h4> THE SHINOBI </h4>
+  <ol>   {% for shinobi in shinobis %}
+
+         <li>name: {{shinobi}}</li>
+            <ul>
+               <li> Age: {{shinobi.shinobi_age}}
+               <li> Powers: {{shinobi.shinobi_powers|linebreaks}}</li>
+       </ul>
+      {% endfor %}
+    </ol>
+
+</div>
+
+{% endblock %}
+
+
+{% block content3 %}
+  
+   <h3> Other Stuff </h3>
+ 
+{% endblock %}
+
+
+{% block content4 %}
+
+   <h3> FOOTER </h3>
+
+{% endblock %}

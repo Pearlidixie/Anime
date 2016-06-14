@@ -1,0 +1,35 @@
+#header{
+     width:100%;
+     height: 100px;
+     background-color:purple;
+     color:white;
+     border:1px solid purple;
+     
+
+}
+
+#navi{
+     border: 1px solid purple;
+}
+
+#left{
+   border: 1px solid purple;
+}
+
+#center{
+    border: 1px solid purple;
+}
+
+#right{
+   border: 1px solid purple;
+}
+
+#footer{
+   border: 1px solid purple;
+}
+
+body{
+   color:red;
+   border: 1px solid purple;
+   padding: 15px 15px 15px 15px;
+}
