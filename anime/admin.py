@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Mage, Shinobi
+from .models import Mage, Shinobi, User
 
 
 # Register your models here.
@@ -7,3 +7,4 @@ from .models import Mage, Shinobi
 
 admin.site.register(Mage)
 admin.site.register(Shinobi)
+admin.site.register(User)

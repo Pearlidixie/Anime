@@ -1,8 +1,8 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 from django.views.generic import View
-from .models import Mage, Shinobi
-from .forms import PostMage
+from .models import Mage, Shinobi, User
+from .forms import PostMage, UserReg
 
 
 # Create your views here.
@@ -26,6 +26,17 @@ def add_new(request):
     else:
         form = PostMage()
     return render(request, 'anime/mage_edit.html', {'form': form})
+
+def add_user(request):
+    if request.method == "POST":
+        form = UserReg(request.POST)
+        if form.is_valid():
+            user = form.save()
+            user.save()
+            return redirect('index')
+    else:
+        form = UserReg()
+    return render(request, 'anime/user_add.html', {'form': form})
 
 
 def myMages(request):

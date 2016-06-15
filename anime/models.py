@@ -1,6 +1,18 @@
+
 from django.db import models
+from django import forms
+
 
 # Create your models here.
+
+class User(models.Model):
+      firstname = models.CharField(max_length=20)
+      surname =  models.CharField(max_length=20)
+      username = models.CharField(max_length=20)
+      user_dob = models.DateField()
+      user_email = models.EmailField()
+      password = models.CharField(max_length=20)
+      re_enter_password = models.CharField(max_length=20,default="")
 
 class Mage(models.Model):
       mage_name = models.CharField(max_length=50)

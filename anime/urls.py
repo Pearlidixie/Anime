@@ -6,4 +6,5 @@ urlpatterns = [
         url(r'^$', views.myMages, name='myMages'),
         url(r'^mage/(?P<pk>\d+)/$', views.mage_detail, name='mage_detail'),
         url(r'^add/new/$', views.add_new, name='add_new'),
+        url(r'^add/user/$', views.add_user, name='add_user'),
 ]
